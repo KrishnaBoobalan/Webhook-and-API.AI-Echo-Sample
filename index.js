@@ -20,17 +20,11 @@ var Operate = {
   'Div': function(a,b){ return a / b },
 };
 
-function gh(Op,a,b){
-  var Opr = Operate(op);
-  var Result = Calc(Math1,Math2);
-  Return
-}
-
 restService.post("/Math", function(req, res) {
   var Math1 = req.body.queryResult.parameters.Mathvalue1;
   var Math2 = req.body.queryResult.parameters.Mathvalue2;
   var operator = req.body.queryResult.parameters.MathOperand;
-  Calc = Operate[operator];
+  var Calc = Operate[operator];
   var Result = Calc(Math1,Math2);
   var spech = "Result is " + Result;
   return res.json({
