@@ -13,13 +13,11 @@ restService.use(
 
 restService.use(bodyParser.json());
 
-restService.post("/echo", function(req, res) {
-  var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
+restService.post("/Math", function(req, res) {
+  var Math1 = req.body.result.parameters.Mathvalue1;
+  var Math2 = req.body.result.parameters.Mathvalue2;
+  var opr = req.body.result.parameters.MathOperand;
+  var speech = "Successful";
   return res.json({
     speech: speech,
     displayText: speech,
