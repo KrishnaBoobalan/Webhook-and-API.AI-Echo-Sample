@@ -14,9 +14,9 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/Math", function(req, res) {
-  var Math1 = req.body.result.parameters.Mathvalue1;
-  var Math2 = req.body.result.parameters.Mathvalue2;
-  var opr = req.body.result.parameters.MathOperand;
+  var Math1 = req.body.queryResult.parameters.Mathvalue1;
+  var Math2 = req.body.queryResult.parameters.Mathvalue2;
+  var opr = req.body.queryResult.parameters.MathOperand;
   var speech = "Successful";
   return res.json({
     speech: speech,
