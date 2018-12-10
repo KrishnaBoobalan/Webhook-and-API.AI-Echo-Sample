@@ -27,7 +27,7 @@ restService.post("/Math", function(req, res) {
         "items": [
           {
             "simpleResponse": {
-              "textToSpeech": "this is a simple response"
+              "textToSpeech": spech
             }
           }
         ]
