@@ -17,9 +17,9 @@ restService.post("/Math", function(req, res) {
   var Math1 = req.body.queryResult.parameters.Mathvalue1;
   var Math2 = req.body.queryResult.parameters.Mathvalue2;
   var opr = req.body.queryResult.parameters.MathOperand;
-  var speech = "Successful";
+  var spech = "Successful";
   return req.json({
-    result : { fulfillmentText: speech, source: "webhook-echo-sample"}
+    result : { fulfillment: { speech: spech, source: "webhook-echo-sample"}}
   });
 });
 
