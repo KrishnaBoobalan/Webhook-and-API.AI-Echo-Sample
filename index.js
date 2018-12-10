@@ -19,7 +19,7 @@ restService.post("/Math", function(req, res) {
   var opr = req.body.queryResult.parameters.MathOperand;
   var spech = "Successful";
   return res.json({
-  "fulfillmentText": "This is a text response",
+  "fulfillmentText": spech,
   "payload": {
     "google": {
       "expectUserResponse": true,
