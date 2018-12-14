@@ -21,8 +21,8 @@ var Operate = {
 };
 
 restService.post("/Math", function(req, res) {
-  var Math1 = req.body.queryResult.parameters.Mathvalue1;
-  var Math2 = req.body.queryResult.parameters.Mathvalue2;
+  var Math1 = parseInt(req.body.queryResult.parameters.Mathvalue1);
+  var Math2 = parseInt(req.body.queryResult.parameters.Mathvalue2);
   var operator = req.body.queryResult.parameters.MathOperand;
   var Calc = Operate[operator];
   var Result = Calc(Math1,Math2);
